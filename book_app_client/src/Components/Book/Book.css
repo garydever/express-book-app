@@ -1,0 +1,19 @@
+.book-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 130px;
+    margin: 2px;
+}
+
+.book-container img {
+    border: solid black 1px;
+}
+
+.bookTitle {
+    font-style: italic;
+}
+
+.bookPublisher {
+    font-size: x-small;
+}

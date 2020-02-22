@@ -1,0 +1,36 @@
+.searchBar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.searchTitle {
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: 'Quattrocento', serif;
+}
+
+.searchInput {
+    width: 350px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    font-size: large;
+    font-family: 'Quattrocento', serif;
+}
+
+.searchButton {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+    font-size: large;
+    border-radius: 15%;
+    background: white;
+}
+
+.searchButton:hover {
+    cursor: pointer;
+}

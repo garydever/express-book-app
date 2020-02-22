@@ -1,0 +1,15 @@
+.app-main-container {
+    display: flex;
+}
+
+.reading-list-component {
+    width: fit-content;
+}
+
+.search-bar-component {
+   height: 136.44px;
+}
+
+.vertical {
+    margin-left: 20px;
+}
