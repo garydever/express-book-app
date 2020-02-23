@@ -4,7 +4,7 @@ import { SearchBar } from '../SearchBar/SearchBar';
 import { ReadingList } from '../ReadingList/ReadingList';
 import { BookList } from '../BookList/BookList';
 
-
+const baseUrl = 'https://dry-temple-74265.herokuapp.com';
 
 export class App extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ export class App extends React.Component {
 
   
   async addToList(book) {
-    const url = `http://localhost:4000/readingList`;
+    const url = `${baseUrl}/readingList`;
     const fetchOptions = {
       method: 'POST',
       headers: {
@@ -70,6 +70,18 @@ export class App extends React.Component {
 
   render() {
     return (
+      <div>
+        <div className="intro">
+          The purpose of this app is to demonstrate a RESTful API in action. 
+          The "Search" button will return a list of books from the GoogleBooks API. 
+          The "Add to list" button will send a POST request to the server (hosted by Heroku), 
+          adding the book to the database. The server will automatically rerender the 
+          user's readinglist with a GET request. The books on the reading list are 
+          marked as "Not yet read" until the user presses the "Finished reading" button. 
+          This sends a PUT request to the server to update the status of the book. The 
+          user can then DELETE the book from the database by hitting the "Remove book" button.
+          <br/>Contact: garythomasdever@gmail.com || <a href="http://github.com/garydever">github</a>
+        </div>
       <div className="app-main-container">
         <div className="vertical">
           <div className="search-bar-component">
@@ -86,6 +98,7 @@ export class App extends React.Component {
           onAdd={this.addToList}
           />
         </div>
+      </div>
       </div>
     )
   }

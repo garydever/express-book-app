@@ -2,6 +2,7 @@ import React from 'react';
 import './ReadingList.css';
 import { ListedBook } from '../ListedBook/ListedBook';
  
+const baseUrl = 'https://dry-temple-74265.herokuapp.com';
 
 export class ReadingList extends React.Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export class ReadingList extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`http://localhost:4000/readingList`)
+        fetch(`${baseUrl}/readingList`)
             .then(response => response.json())
             .then(result => {
                 this.setState({
@@ -33,7 +34,7 @@ export class ReadingList extends React.Component {
     }
  
     async markAsRead(bookId) {
-        const url = `http://localhost:4000/readingList/${bookId}`;
+        const url = `${baseUrl}/readingList/${bookId}`;
         const fetchOptions = {
         method: 'PUT',
         headers: {
@@ -54,7 +55,7 @@ export class ReadingList extends React.Component {
         }
 
     async removeBook(bookId) {
-        const url = `http://localhost:4000/readingList/${bookId}`;
+        const url = `${baseUrl}/readingList/${bookId}`;
         const fetchOptions = {
           method: 'DELETE'
         }
